@@ -9,7 +9,8 @@ const AddProduct = () => {
         const form = e.target;
         const photo = form.photo.value;
         const name = form.name.value;
-        const brandName = form.brandName.value;
+        const brandNameValue = form.brandName.value;
+        const brandName = brandNameValue.toLowerCase();
         const type = form.type.value;
         const price = form.type.value;
         const description = form.description.value;
@@ -18,7 +19,7 @@ const AddProduct = () => {
         setError("");
 
         // Brand Validation
-        if (brandName !== 'Samsung' && brandName !== 'Google' && brandName !== 'Apple' && brandName !== 'Dell' && brandName !== 'Hp' && brandName !== 'Xiaomi') {
+        if (brandNameValue !== 'Samsung' && brandNameValue !== 'Google' && brandNameValue !== 'Apple' && brandNameValue !== 'Dell' && brandNameValue !== 'Hp' && brandNameValue !== 'Xiaomi') {
             setError("We only accept Samsung, Dell, Xiaomi, Google, Hp, and Apple Products. Please Check if your name is correct");
             return;
         }
@@ -58,7 +59,6 @@ const AddProduct = () => {
                 </form>
             </div>
         </div>
-
     );
 };
 
