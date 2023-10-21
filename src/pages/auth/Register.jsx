@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
 import { updateProfile } from "firebase/auth";
-
+import LogInBg from '../../assets/loginbg.jpg'
 
 const Register = () => {
 
@@ -72,40 +72,27 @@ const Register = () => {
 
     return (
 
-        <div className="py-3 px-3 md:px-0 container mx-auto space-y-3 md:space-y-5 flex flex-col items-center">
-            <h3 className="bg-black p-2 md:p-5 text-white rounded-3xl font-bold text-2xl md:text-5xl">Register</h3>
-            <form onSubmit={handleRegister} className="md:w-2/3 lg:w-1/2 border border-gray-400 md:m-7  p-3 md:p-7 rounded-3xl">
-
-                <input className="w-full mt-1 mb-2 md:mb-5 border border-gray-400 py-2 px-3 rounded-xl outline-none" type="text" name="name" placeholder="Your Name" required />
-
-
-                <input className="w-full mt-1 mb-2 md:mb-5 border border-gray-400 py-2 px-3 rounded-xl outline-none" type="text" name="photo" placeholder="Photo URL" />
-
-
-                <input className="w-full mt-1 mb-2 md:mb-5 border border-gray-400 py-2 px-3 rounded-xl outline-none" type="email" name="email" placeholder="Your Email" required />
-
-
-                <input className="w-full mt-1 border border-gray-400 py-2 px-3 rounded-xl outline-none" type="password" name="password" placeholder="Type a Password" required />
-
-                {error ? (
-                    <div className="font-semibold text-red-600 mt-5">{error}</div>
-                ) : (
-                    <div className="font-semibold text-green-600 mt-5">{success}</div>
-                )}
-
-                <div className="mt-5">
-                    <input className="mr-1" type="checkbox" name="terms" id="terms" required />
-                    <label htmlFor="terms">Accept Our Terms and Conditions</label>
+        <div className="my-10 container mx-auto">
+            <div className="bg-gray-100 mx-3 md:mx-0 flex flex-col md:flex-row gap-5 rounded-3xl">
+                <div style={{ backgroundImage: `url(${LogInBg})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} className="py-14 md:w-1/2 rounded-3xl justify-center text-white flex items-center">
+                    <h4 className="font-bold text-3xl md:text-5xl">Register!</h4>
                 </div>
-
-                <button className="btn rounded-xl w-full mt-5 bg-gray-900 hover:bg-black text-white font-semibold border-none">Register</button>
-
-                <p className="text-center font-semibold text-lg my-1 md:my-3">Or,</p>
-
-                <span onClick={handleGoogleSignIn} className="btn w-full rounded-xl"><FcGoogle></FcGoogle>Continue With Google</span>
-            </form>
-            <p className="text-sm sm:text-base md:text-lg">Already Have an Account? Please <Link className="underline font-medium text-gray-950" to="/login">Log In</Link></p>
-            <div className='h-1 w-40 mx-auto bg-gray-900'></div>
+                <form onSubmit={handleRegister} className="md:w-1/2 p-3 md:p-5 space-y-3">
+                    <input type="text" name="name" placeholder="Your Name" required className="input w-full" />
+                    <input type="text" name="photo" placeholder="Photo URL" required className="input w-full" />
+                    <input type="text" name="email" placeholder="Your Email" required className="input w-full" />
+                    <input type="password" name="password" placeholder="Type a Password" required className="input w-full " />
+                    {error ? (
+                        <div className="font-semibold text-red-600 mt-5">{error}</div>
+                    ) : (
+                        <div className="font-semibold text-green-600 mt-5">{success}</div>
+                    )}
+                    <button className="btn rounded-xl w-full mt-5 bg-gray-900 hover:bg-black text-white font-semibold border-none">Register</button>
+                    <p className="text-center font-semibold text-lg my-1 md:my-3">Or,</p>
+                    <span onClick={handleGoogleSignIn} className="btn w-full bg-gray-300 hover:bg-gray-400 rounded-xl"><FcGoogle className="text-lg"></FcGoogle>Continue With Google</span>
+                    <p className="text-sm text-center sm:text-base md:text-lg">Already Have an Account? Please <Link className="underline font-medium text-gray-950" to="/login">Log In</Link></p>
+                </form>
+            </div>
         </div>
     );
 };

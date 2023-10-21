@@ -46,7 +46,7 @@ const AddProduct = () => {
                     <h4 className="font-bold text-3xl md:text-5xl">Add Product</h4>
                 </div>
                 <form onSubmit={handleAddDevice} className="md:w-1/2 p-3 md:p-5 space-y-3">
-                    <input type="text" name="photo" placeholder="Photo Url (Aspect Ratio: 1:1)" className="input w-full" />
+                    <input type="text" name="photo" placeholder="Photo Url" className="input w-full" />
                     <input type="text" name="name" placeholder="Name" className="input w-full" />
                     <input type="text" name="brandName" placeholder="Brand Name" className="input w-full" />
                     <input type="text" name="type" placeholder="Type" className="input w-full" />
