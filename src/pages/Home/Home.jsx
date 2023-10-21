@@ -1,8 +1,12 @@
 import Header from "./Header";
+import Services from "./Services";
 
 const Home = () => {
     return (
-        <Header></Header>
+        <div>
+            <Header></Header>
+            <Services></Services>
+        </div>
     );
 };
 

@@ -21,7 +21,8 @@ const Navbar = () => {
             </div>
 
             <NavLink to='/' className="flex gap-1 text-2xl md:text-3xl">
-                <FiCodesandbox className="text-3xl md:text-4xl"></FiCodesandbox> <h1 className="font-bold leading-none">sphere.</h1>
+                <FiCodesandbox className="text-3xl md:text-4xl"></FiCodesandbox>
+                <h1 className="font-bold leading-none">sphere.</h1>
             </NavLink>
 
             <div className="hidden lg:flex items-center ml-10">
