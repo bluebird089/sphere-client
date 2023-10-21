@@ -13,7 +13,7 @@ const Header = () => {
                 </div>
                 <div className="col-span-1 grid grid-cols-3 lg:grid-cols-2 gap-2 md:gap-5">
 
-                    <Link to='/blogs' style={{ backgroundImage: `url(${SphereGray})` }} className="rounded-xl sm:rounded-3xl col-span-1 lg:col-span-2 min-h-[70px] sm:min-h-[150px]">
+                    <Link to='/blogs' style={{ backgroundImage: `url(${SphereGray})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} className="rounded-xl sm:rounded-3xl col-span-1 lg:col-span-2 min-h-[70px] sm:min-h-[150px]">
                         <div className= 'rounded-xl sm:rounded-3xl bg-black bg-opacity-0 hover:bg-opacity-20 duration-300 text-black p-2 sm:p-5 flex flex-col justify-between h-full w-full'>
                             <div className='flex justify-between items-center'>
                                 <p className='font-semibold text-sm hidden md:inline-block'>WORLD HEALING TECH</p>
