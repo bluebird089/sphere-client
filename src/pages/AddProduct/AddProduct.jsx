@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AddProductBg from '../../assets/addproductbg.jpg'
 
 const AddProduct = () => {
 
@@ -41,10 +42,10 @@ const AddProduct = () => {
     return (
         <div className="my-10 container mx-auto">
             <div className="bg-gray-100 mx-3 md:mx-0 flex flex-col md:flex-row gap-5 rounded-3xl">
-                <div className="bg-black py-3 md:w-1/2 rounded-3xl justify-center text-white flex items-center">
+                <div style={{ backgroundImage: `url(${AddProductBg})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} className="py-14 md:w-1/2 rounded-3xl justify-center text-white flex items-center">
                     <h4 className="font-bold text-3xl md:text-5xl">Add Product</h4>
                 </div>
-                <form onSubmit={handleAddDevice} className="md:w-1/2 p-5 space-y-3">
+                <form onSubmit={handleAddDevice} className="md:w-1/2 p-3 md:p-5 space-y-3">
                     <input type="text" name="photo" placeholder="Photo Url (Aspect Ratio: 1:1)" className="input w-full" />
                     <input type="text" name="name" placeholder="Name" className="input w-full" />
                     <input type="text" name="brandName" placeholder="Brand Name" className="input w-full" />

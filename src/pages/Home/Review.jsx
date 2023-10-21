@@ -1,14 +1,15 @@
 import GigachadPhoto from '../../assets/gigachad.jpg';
 import SimonPhoto from '../../assets/simonriley.jpg';
 import KhabibPhoto from '../../assets/khabib.jpg';
+import ReviwBg from '../../assets/reviewbg.jpg';
 
 const Review = () => {
     return (
         <div className="container mx-auto my-10 px-3 md:px-0">
             <div className="bg-gray-100 rounded-3xl">
-                <div className="bg-black text-white p-3 md:p-10 text-center rounded-3xl space-y-2">
-                    <h3 className="md:text-2xl font-semibold">
-                        WE ARE THE TOP RATED TECH DISTRIBUTOR IN BANGLADESH
+                <div style={{ backgroundImage: `url(${ReviwBg})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} className="text-white p-3 md:p-10 text-center rounded-3xl space-y-2">
+                    <h3 className="md:text-4xl font-semibold">
+                        WE ARE THE TOP RATED<br />TECH DISTRIBUTOR IN BANGLADESH
                     </h3>
                     <p className="font-light text-xs">Your satisfaction and trust are our top priorities. Every product we distribute undergoes rigorous quality checks to ensure authenticity and reliability. We stand by the quality of our offerings</p>
                 </div>

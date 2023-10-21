@@ -22,7 +22,7 @@ const Services = () => {
                     </div>
                 </div>
                 <div className='lg:w-1/2 grid grid-cols-2 gap-5 p-5 md:p-10'>
-                    <Link to='/google-products' className="bg-white hover:bg-green-50 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
+                    <Link to='/products/google' className="bg-white hover:bg-green-50 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
                         <div className='flex justify-between items-center'>
                             <FcGoogle className='text-4xl'></FcGoogle>
                             <TbArrowUpRight className='text-2xl'></TbArrowUpRight>
@@ -31,7 +31,7 @@ const Services = () => {
                             <h2 className='text-xl sm:text-4xl font-semibold'>Google</h2>
                         </div>
                     </Link>
-                    <Link to='/apple-products' className="bg-white hover:bg-black hover:bg-opacity-5 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
+                    <Link to='/products/apple' className="bg-white hover:bg-black hover:bg-opacity-5 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
                         <div className='flex justify-between items-center'>
                             <AiFillApple className='text-4xl'></AiFillApple>
                             <TbArrowUpRight className='text-2xl'></TbArrowUpRight>
@@ -40,7 +40,7 @@ const Services = () => {
                             <h2 className='text-xl sm:text-4xl font-semibold'>Apple</h2>
                         </div>
                     </Link>
-                    <Link to='/apple-products' className="bg-white hover:bg-sky-100 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
+                    <Link to='/products/dell' className="bg-white hover:bg-sky-100 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
                         <div className='flex justify-between items-center'>
                             <img className='w-8' src={`${DellLogo}`} alt="" />
                             <TbArrowUpRight className='text-2xl'></TbArrowUpRight>
@@ -49,7 +49,7 @@ const Services = () => {
                             <h2 className='text-xl sm:text-4xl font-semibold'>Dell</h2>
                         </div>
                     </Link>
-                    <Link to='/apple-products' className="bg-white hover:bg-orange-100 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
+                    <Link to='/products/xiaomi' className="bg-white hover:bg-orange-100 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
                         <div className='flex justify-between items-center'>
                             <img className='w-8' src={`${XiaomiLogo}`} alt="" />
                             <TbArrowUpRight className='text-2xl'></TbArrowUpRight>
@@ -58,7 +58,7 @@ const Services = () => {
                             <h2 className='text-xl sm:text-4xl font-semibold'>Xiaomi</h2>
                         </div>
                     </Link>
-                    <Link to='/apple-products' className="bg-white hover:bg-gray-200 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
+                    <Link to='/products/samsung' className="bg-white hover:bg-gray-200 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
                         <div className='flex justify-between items-center'>
                             <img className='w-8' src={`${SamsungLogo}`} alt="" />
                             <TbArrowUpRight className='text-2xl'></TbArrowUpRight>
@@ -67,7 +67,7 @@ const Services = () => {
                             <h2 className='text-xl sm:text-4xl font-semibold'>Samsung</h2>
                         </div>
                     </Link>
-                    <Link to='/apple-products' className="bg-white hover:bg-sky-100 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
+                    <Link to='/products/hp' className="bg-white hover:bg-sky-100 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
                         <div className='flex justify-between items-center'>
                             <img className='w-8' src={`${HpLogo}`} alt="" />
                             <TbArrowUpRight className='text-2xl'></TbArrowUpRight>
