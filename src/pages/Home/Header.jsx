@@ -7,13 +7,13 @@ const Header = () => {
     return (
         <div className="container mx-auto px-2 md:px-0">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-5 text-white">
-                <div style={{ backgroundImage: `url(${SphereBlack})` }} className="bg-gray-900 col-span-1 sm:h-[200px] md:h-[300px] lg:h-[450px] xl:h-[550px] p-5 md:p-10 rounded-3xl">
+                <div style={{ backgroundImage: `url(${SphereBlack})` }} className="bg-gray-900 col-span-1 h-[150px] md:h-[300px] lg:h-[450px] xl:h-[550px] p-5 md:p-10 rounded-3xl">
                     <p className='font-semibold text-sm'>SPHERE</p>
                     <h2 className='text-2xl md:text-5xl'>Pioneering Tomorrow's Tech Revolution</h2>
                 </div>
                 <div className="col-span-1 grid grid-cols-3 lg:grid-cols-2 gap-2 md:gap-5">
 
-                    <Link to='/blogs' style={{ backgroundImage: `url(${SphereGray})` }} className="rounded-xl sm:rounded-3xl col-span-1 lg:col-span-2 sm:min-h-[150px]">
+                    <Link to='/blogs' style={{ backgroundImage: `url(${SphereGray})` }} className="rounded-xl sm:rounded-3xl col-span-1 lg:col-span-2 min-h-[70px] sm:min-h-[150px]">
                         <div className= 'rounded-xl sm:rounded-3xl bg-black bg-opacity-0 hover:bg-opacity-20 duration-300 text-black p-2 sm:p-5 flex flex-col justify-between h-full w-full'>
                             <div className='flex justify-between items-center'>
                                 <p className='font-semibold text-sm hidden md:inline-block'>WORLD HEALING TECH</p>
