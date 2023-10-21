@@ -1,7 +1,9 @@
 const AddProduct = () => {
     return (
         <div>
-            Add Product
+            <form>
+                
+            </form>
         </div>
     );
 };

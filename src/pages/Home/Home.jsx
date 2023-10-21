@@ -1,4 +1,5 @@
 import Header from "./Header";
+import OurAddress from "./OurAddress";
 import Services from "./Services";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <div>
             <Header></Header>
             <Services></Services>
+            <OurAddress></OurAddress>
         </div>
     );
 };
