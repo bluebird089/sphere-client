@@ -1,7 +1,19 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FiCodesandbox } from "react-icons/fi";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        logOut()
+            .then(() => {
+
+            })
+            .catch(() => { });
+    }
 
     const navLink = <>
         <li><NavLink to='/'><a>Home</a></NavLink></li>
@@ -32,7 +44,15 @@ const Navbar = () => {
             </div>
 
             <div className="flex-1 flex justify-end">
-                <a className="btn btn-sm md:btn-md">Log In</a>
+                {
+                    user ? (
+                        <button onClick={handleSignOut} to='/login' className="btn btn-sm sm:btn-md bg-gray-900 hover:bg-black text-white font-semibold border-none w-full rounded-full">Log Out</button>
+                    ) : (<>
+                        <Link to='/register' className="btn px-2 btn-sm sm:btn-md mr-1 font-bold text-black rounded-full">Register</Link>
+                        <Link to='/login' className="btn px-2 btn-sm sm:btn-md bg-gray-900 hover:bg-black  text-white font-semibold border-none rounded-full">Log In</Link>
+                    </>
+                    )
+                }
             </div>
         </div>
     );
