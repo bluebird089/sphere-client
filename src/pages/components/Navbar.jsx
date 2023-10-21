@@ -46,7 +46,7 @@ const Navbar = () => {
             <div className="flex-1 flex justify-end">
                 {
                     user ? (
-                        <button onClick={handleSignOut} to='/login' className="btn btn-sm sm:btn-md bg-gray-900 hover:bg-black text-white font-semibold border-none w-full rounded-full">Log Out</button>
+                        <button onClick={handleSignOut} to='/login' className="btn px-2 btn-sm sm:btn-md bg-gray-900 hover:bg-black text-white font-semibold border-none rounded-full">Log Out</button>
                     ) : (<>
                         <Link to='/register' className="btn px-2 btn-sm sm:btn-md mr-1 font-bold text-black rounded-full">Register</Link>
                         <Link to='/login' className="btn px-2 btn-sm sm:btn-md bg-gray-900 hover:bg-black  text-white font-semibold border-none rounded-full">Log In</Link>
