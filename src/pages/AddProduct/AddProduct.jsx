@@ -12,7 +12,7 @@ const AddProduct = () => {
         const name = form.name.value;
         const brandName = form.brandName.value;
         const type = form.type.value;
-        const price = form.type.value;
+        const price = form.price.value;
         const description = form.description.value;
         const rating = form.rating.value;
         const newProduct = { photo, name, brandName, type, price, description, rating };
