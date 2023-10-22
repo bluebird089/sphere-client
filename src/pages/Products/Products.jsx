@@ -1,11 +1,9 @@
-import { useLoaderData, useLocation } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Product from "./Product";
 
 const Products = () => {
 
     const products = useLoaderData();
-    const location = useLocation();
-    console.log(location);
 
     return (
         <div className="my-10 container mx-auto">
