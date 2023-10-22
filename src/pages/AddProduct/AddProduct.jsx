@@ -19,7 +19,19 @@ const AddProduct = () => {
         console.log(brandName);
         setError("");
 
-
+        // 
+        if(brandName === 'none'){
+            setError('Please select a Brand!!');
+            return;
+        }
+        if(type === 'none'){
+            setError('Please select the Type of product!!');
+            return;
+        }
+        if(rating === 'none'){
+            setError('Please rate the product!!');
+            return;
+        }
 
         // Posting Data
         fetch("http://localhost:5000/products", {

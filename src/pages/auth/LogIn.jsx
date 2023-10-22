@@ -74,8 +74,9 @@ const LogIn = () => {
                     ) : (
                         <div className="font-semibold text-green-600 mt-5">{success}</div>
                     )}
-                    <button className="btn rounded-xl w-full md:mt-1 bg-gray-950 hover:bg-black text-white font-semibold border-none">Log In</button>
+                    <button className="btn rounded-xl w-full md:mt-1 bg-gray-900 hover:bg-black text-white font-semibold border-none">Log In</button>
                     <p className="text-center font-semibold text-lg my-1 md:my-3">Or,</p>
+                    <span onClick={handleGoogleSignIn} className="btn w-full border-black border-2 bg-white hover:bg-gray-100 hover:border-2 hover:border-black rounded-xl"><FcGoogle className="text-lg"></FcGoogle>Continue With Google</span>
                     <p className="text-sm text-center sm:text-base md:text-lg">New Here? Please <Link className="underline font-medium text-black" to="/register">Register</Link></p>
                 </form>
             </div>

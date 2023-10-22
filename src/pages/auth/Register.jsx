@@ -89,7 +89,7 @@ const Register = () => {
                     )}
                     <button className="btn rounded-xl w-full mt-5 bg-gray-900 hover:bg-black text-white font-semibold border-none">Register</button>
                     <p className="text-center font-semibold text-lg my-1 md:my-3">Or,</p>
-                    <span onClick={handleGoogleSignIn} className="btn w-full bg-gray-300 hover:bg-gray-400 rounded-xl"><FcGoogle className="text-lg"></FcGoogle>Continue With Google</span>
+                    <span onClick={handleGoogleSignIn} className="btn w-full border-black border-2 bg-white hover:bg-gray-100 hover:border-2 hover:border-black rounded-xl"><FcGoogle className="text-lg"></FcGoogle>Continue With Google</span>
                     <p className="text-sm text-center sm:text-base md:text-lg">Already Have an Account? Please <Link className="underline font-medium text-gray-950" to="/login">Log In</Link></p>
                 </form>
             </div>
