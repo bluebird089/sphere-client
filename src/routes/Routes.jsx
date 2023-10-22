@@ -8,7 +8,6 @@ import LogIn from "../pages/auth/LogIn";
 import Register from "../pages/auth/Register";
 import Products from "../pages/Products/Products";
 
-
 const router = createBrowserRouter([
     {
         path: "/",
