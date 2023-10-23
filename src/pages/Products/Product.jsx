@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Product = ({ product }) => {
 
-    const { photo, name, brandName, type, price, rating } = product;
+    const { _id, photo, name, brandName, type, price, rating } = product;
 
     function capitalizeFirstLetter(inputString) {
         return inputString.charAt(0).toUpperCase() + inputString.slice(1);
@@ -25,8 +25,8 @@ const Product = ({ product }) => {
                 <h3 className='text-lg font-semibold'>Price: <span className='font-light'>{price}</span></h3>
                 <h3 className='text-lg font-semibold'>Rating: <span className='font-light'>{rating}</span></h3>
                 <div className='flex justify-end gap-1'>
-                    <Link to='/details/:id' className='btn btn-sm rounded-full'>Details</Link>
-                    <Link to='update/:id' className='btn btn-sm rounded-full'>Update</Link>
+                    <Link to={`/details/${_id}`} className='btn btn-sm rounded-full'>Details</Link>
+                    <Link to={`/update/${_id}`} className='btn btn-sm rounded-full'>Update</Link>
                 </div>
             </div>
         </div>
