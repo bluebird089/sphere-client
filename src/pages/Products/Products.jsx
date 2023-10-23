@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Product from "./Product";
+import { useState } from "react";
 
 const Products = () => {
 
@@ -11,11 +12,14 @@ const Products = () => {
                 <div className="bg-black py-3 lg:w-1/2 rounded-3xl justify-center text-white flex items-center">
                     <h4 className="font-bold text-3xl md:text-5xl">Products</h4>
                 </div>
-                <div className="lg:w-1/2 p-5 grid grid-cols-1 md:grid-cols-2 gap-5">
-                    {
-                        products.map(product => <Product key={product._id} product={product}></Product>) 
-                    }
-                </div>
+                {
+                    products.length === 0 ? <div className="text-2xl sm:text-3xl md:text-5xl font-bold flex justify-center lg:w-1/2 py-20 md:py-40"><h3>Products Coming Soon</h3></div> : <div className="lg:w-1/2 p-5 grid grid-cols-1 md:grid-cols-2 gap-5">
+                        {
+                            products.map(product => <Product key={product._id} product={product}></Product>)
+                        }
+                    </div>
+                }
+
             </div>
         </div>
 

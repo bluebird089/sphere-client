@@ -2,11 +2,11 @@ import { useLoaderData } from "react-router-dom";
 
 const Details = () => {
 
-    const data = useLoaderData();
+    const { photo, name, brandName, type, price, description, rating } = useLoaderData();
 
     return (
         <div>
-            
+
         </div>
     );
 };

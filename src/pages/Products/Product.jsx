@@ -14,7 +14,7 @@ const Product = ({ product }) => {
 
 
     return (
-        <div className='bg-black rounded-[22px] flex flex-col'>
+        <div className='bg-gray-900 rounded-[22px] flex flex-col'>
             <div className='bg-white flex justify-center items-center rounded-[20px] p-12 relative flex-1'>
                 <img className='w-full' src={photo} alt="" />
             </div>
