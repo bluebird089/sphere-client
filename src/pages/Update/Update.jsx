@@ -7,6 +7,7 @@ const Update = () => {
     const [error, setError] = useState("");
 
     const { _id, photo, name, price, description } = useLoaderData();
+    console.log(photo);
 
     const handleUpdateDevice = e => {
         e.preventDefault();
@@ -36,7 +37,7 @@ const Update = () => {
         }
 
         // Updating Data
-        fetch(`http://localhost:5000/products/${_id}`, {
+        fetch(`http://localhost:5000/product/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -54,7 +55,7 @@ const Update = () => {
         <div className="my-10 container mx-auto">
             <div className="bg-gray-100 mx-3 md:mx-0 flex flex-col md:flex-row gap-5 rounded-3xl">
                 <div style={{ backgroundImage: `url(${AddProductBg})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} className="py-14 md:w-1/2 rounded-3xl justify-center text-white flex items-center">
-                    <h4 className="font-bold text-3xl md:text-5xl">Add Product</h4>
+                    <h4 className="font-bold text-3xl md:text-5xl">Update Product</h4>
                 </div>
                 <form onSubmit={handleUpdateDevice} className="md:w-1/2 p-3 md:p-5 space-y-3">
                     <input type="text" name="photo" defaultValue={photo} placeholder="Photo Url" className="input w-full" />
