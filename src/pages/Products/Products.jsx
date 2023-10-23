@@ -1,6 +1,5 @@
 import { useLoaderData } from "react-router-dom";
 import Product from "./Product";
-import { useState } from "react";
 
 const Products = () => {
 
