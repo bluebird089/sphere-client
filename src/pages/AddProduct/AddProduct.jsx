@@ -1,5 +1,6 @@
 import { useState } from "react";
-import AddProductBg from '../../assets/addproductbg.jpg'
+import AddProductBg from '../../assets/addproductbg.jpg';
+import Swal from 'sweetalert2'
 
 const AddProduct = () => {
 
@@ -16,19 +17,18 @@ const AddProduct = () => {
         const description = form.description.value;
         const rating = form.rating.value;
         const newProduct = { photo, name, brandName, type, price, description, rating };
-        console.log(brandName);
         setError("");
 
         // 
-        if(brandName === 'none'){
+        if (brandName === 'none') {
             setError('Please select a Brand!!');
             return;
         }
-        if(type === 'none'){
+        if (type === 'none') {
             setError('Please select the Type of product!!');
             return;
         }
-        if(rating === 'none'){
+        if (rating === 'none') {
             setError('Please rate the product!!');
             return;
         }
@@ -43,7 +43,13 @@ const AddProduct = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success',
+                        text: 'Added Product',
+                    })
+                }
             })
     }
 
