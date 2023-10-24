@@ -1,6 +1,6 @@
 import { useState } from "react";
 import AddProductBg from '../../assets/addproductbg.jpg';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 const AddProduct = () => {
 
@@ -48,7 +48,7 @@ const AddProduct = () => {
                         icon: 'success',
                         title: 'Success',
                         text: 'Added Product',
-                    })
+                    });
                 }
             })
     }
