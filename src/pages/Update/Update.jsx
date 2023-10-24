@@ -1,13 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import AddProductBg from '../../assets/addproductbg.jpg'
 import { useState } from "react";
+import Swal from 'sweetalert2';
 
 const Update = () => {
 
     const [error, setError] = useState("");
 
     const { _id, photo, name, price, description } = useLoaderData();
-    console.log(photo);
 
     const handleUpdateDevice = e => {
         e.preventDefault();
@@ -47,6 +47,13 @@ const Update = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success',
+                        text: 'Updated Product',
+                    });
+                }
             })
     }
 
