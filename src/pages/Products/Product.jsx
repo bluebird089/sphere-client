@@ -12,7 +12,6 @@ const Product = ({ product }) => {
 
     const capitalizedBrandName = capitalizeFirstLetter(`${brandName}`);
 
-
     return (
         <div className='bg-gray-900 rounded-[22px] flex flex-col'>
             <div className='bg-white flex justify-center items-center rounded-[20px] p-12 relative flex-1'>

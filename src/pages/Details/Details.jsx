@@ -2,13 +2,28 @@ import { useLoaderData } from "react-router-dom";
 
 const Details = () => {
 
-    const { photo, name, brandName, type, price, description, rating } = useLoaderData();
+    const product = useLoaderData();
+    const { photo, name, brandName, type, price, description, rating } = product;
 
     function capitalizeFirstLetter(inputString) {
         return inputString.charAt(0).toUpperCase() + inputString.slice(1);
     }
 
     const capitalizedBrandName = capitalizeFirstLetter(`${brandName}`);
+
+    const handleAddToCart = () => {
+        fetch("http://localhost:5000/cart", {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(product)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+    }
 
     return (
         <div className="my-10 container mx-auto">
@@ -27,7 +42,7 @@ const Details = () => {
                     <h3>Type: {type}</h3>
                     <h3>Rating: {rating}</h3>
                     <h3>Price: {price}</h3>
-                    <button className="btn bg-gray-900 hover:bg-black text-white">Add To Cart</button>
+                    <button onClick={handleAddToCart} className="btn bg-gray-900 hover:bg-black text-white">Add To Cart</button>
                 </div>
             </div>
         </div>
