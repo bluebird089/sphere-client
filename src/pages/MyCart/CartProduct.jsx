@@ -12,7 +12,7 @@ const CartProduct = ({ product, cartProducts, setCartProducts }) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                const remaining = cartProducts.filter(cartProduct => cartProduct._id === id);
+                const remaining = cartProducts.filter(cartProduct => cartProduct._id !== id);
                 setCartProducts(remaining);
             })
     }

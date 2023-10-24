@@ -14,9 +14,9 @@ const MyCart = () => {
                     <h4 className="font-bold text-3xl md:text-5xl">My Cart</h4>
                 </div>
                 {
-                    product.length === 0 ? <div className="text-2xl sm:text-3xl md:text-5xl font-bold flex justify-center lg:w-1/2 py-20 md:py-40"><h3>Nothing in cart</h3></div> : <div className="lg:w-1/2 p-3 md:p-5 space-y-3">
+                    cartProducts.length === 0 ? <div className="text-2xl sm:text-3xl md:text-5xl font-bold flex justify-center lg:w-1/2 py-20 md:py-40"><h3>Nothing in cart</h3></div> : <div className="lg:w-1/2 p-3 md:p-5 space-y-3">
                         {
-                            product.map(product => <CartProduct key={product._id} product={product} cartProducts={cartProducts} setCartProducts={setCartProducts}></CartProduct>)
+                            cartProducts.map(product => <CartProduct key={product._id} product={product} cartProducts={cartProducts} setCartProducts={setCartProducts}></CartProduct>)
                         }
                     </div>
                 }
