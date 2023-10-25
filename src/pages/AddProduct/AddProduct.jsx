@@ -34,7 +34,7 @@ const AddProduct = () => {
         }
 
         // Posting Data
-        fetch("http://localhost:5000/products", {
+        fetch("https://b8a10-brandshop-server-side-bluebird089-k71ek7rre-bluebird089.vercel.app/products", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
