@@ -17,7 +17,7 @@ const Header = () => {
                 </div>
                 <div className="col-span-1 grid grid-cols-3 lg:grid-cols-2 gap-2 md:gap-5">
 
-                    <Link to='/blogs' style={{ backgroundImage: `url(${SphereGray})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} className="rounded-xl sm:rounded-3xl col-span-1 lg:col-span-2 min-h-[70px] sm:min-h-[150px]">
+                    <div style={{ backgroundImage: `url(${SphereGray})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} className="rounded-xl sm:rounded-3xl col-span-1 lg:col-span-2 min-h-[70px] sm:min-h-[150px]">
                         <div className='rounded-xl sm:rounded-3xl bg-black bg-opacity-0 hover:bg-opacity-20 duration-300 text-black p-2 sm:p-5 flex flex-col justify-between h-full w-full'>
                             <div className='flex justify-between items-center'>
                                 <p className='font-semibold text-sm hidden md:inline-block'>WORLD HEALING TECH</p>
@@ -27,9 +27,9 @@ const Header = () => {
                                 <h2 className='text-xs sm:text-2xl lg:text-4xl font-semibold'>View our blog</h2>
                             </div>
                         </div>
-                    </Link>
+                    </div>
 
-                    <Link to='/about-us' className="bg-purple-400 hover:bg-purple-500 duration-300  rounded-xl sm:rounded-3xl col-span-1 p-2 sm:p-5 flex flex-col justify-between">
+                    <div className="bg-purple-400 hover:bg-purple-500 duration-300  rounded-xl sm:rounded-3xl col-span-1 p-2 sm:p-5 flex flex-col justify-between">
                         <div className='flex justify-between items-center'>
                             <p className='font-semibold text-sm hidden md:inline-block'>DISCOVER OUR HISTORY</p>
                             <TbArrowUpRight className='text-2xl'></TbArrowUpRight>
@@ -37,9 +37,9 @@ const Header = () => {
                         <div>
                             <h2 className='text-xs sm:text-2xl lg:text-4xl font-semibold'>About Us</h2>
                         </div>
-                    </Link>
+                    </div>
 
-                    <Link to='contact-us' className="bg-lime-400 hover:bg-lime-500  rounded-xl sm:rounded-3xl col-span-1 duration-300 text-black p-2 sm:p-5 flex flex-col justify-between">
+                    <div className="bg-lime-400 hover:bg-lime-500  rounded-xl sm:rounded-3xl col-span-1 duration-300 text-black p-2 sm:p-5 flex flex-col justify-between">
                         <div className='flex justify-between items-center '>
                             <p className='font-semibold text-sm hidden md:inline-block'>HAVE ANY QUESTION?</p>
                             <TbSend className='text-2xl'></TbSend>
@@ -47,7 +47,7 @@ const Header = () => {
                         <div>
                             <h2 className='text-xs sm:text-2xl lg:text-4xl font-semibold'>Contact Us</h2>
                         </div>
-                    </Link>
+                    </div>
                 </div>
             </div>
         </div>
