@@ -4,6 +4,7 @@ import { BiMoon, BiSun } from "react-icons/bi";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import PropTypes from 'prop-types';
+import defaultUser from '../../assets/defualtuser.jpg'
 
 const Navbar = ({ toggleDarkMode, darkMode }) => {
 
@@ -50,9 +51,15 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
             <div className="flex-1 flex gap-2 justify-end">
                 <button onClick={toggleDarkMode} className={`btn btn-sm sm:btn-md btn-circle flex justify-center ${location.pathname === '/' ? 'block' : 'hidden'}`}>
                     {
-                        darkMode ? <BiSun className="text-xl"></BiSun> :  <BiMoon className="text-xl"></BiMoon>
+                        darkMode ? <BiSun className="text-xl"></BiSun> : <BiMoon className="text-xl"></BiMoon>
                     }
                 </button>
+                <div className="bg-black flex items-center gap-1 md:gap-2 rounded-full duration-500">
+                    {
+                        user?.displayName ? <h3 className="text-white ml-2 text-xs sm:text-base md:ml-3 font-semibold">{user.displayName}</h3> : <></>
+                    }
+                    <img className="rounded-full w-8  sm:w-12" src={user?.photoURL ? user.photoURL : `${defaultUser}`} alt="user" />
+                </div>
                 {
                     user ? (
                         <button onClick={handleSignOut} to='/login' className="btn px-2 btn-sm sm:btn-md bg-gray-900 hover:bg-black text-white font-semibold border-none rounded-full">Log Out</button>
