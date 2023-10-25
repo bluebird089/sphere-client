@@ -24,7 +24,7 @@ const router = createBrowserRouter([
             {
                 path: "products/:brand",
                 element: <Products></Products>,
-                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-bluebird089-k71ek7rre-bluebird089.vercel.app/products/${params.brand}`)
+                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-bluebird089.vercel.app/products/${params.brand}`)
             },
             {
                 path: "/add-product",
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
             {
                 path: "/my-cart",
                 element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader: () => fetch("https://b8a10-brandshop-server-side-bluebird089-k71ek7rre-bluebird089.vercel.app/cart")
+                loader: () => fetch("https://b8a10-brandshop-server-side-bluebird089.vercel.app/cart")
             },
             {
                 path: "/login",
@@ -46,12 +46,12 @@ const router = createBrowserRouter([
             {
                 path: "/details/:id",
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-bluebird089-k71ek7rre-bluebird089.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-bluebird089.vercel.app/product/${params.id}`)
             },
             {
                 path: "/update/:id",
                 element: <PrivateRoute><Update></Update></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-bluebird089-k71ek7rre-bluebird089.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-bluebird089.vercel.app/product/${params.id}`)
             }
         ]
     },

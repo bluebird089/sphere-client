@@ -34,7 +34,7 @@ const AddProduct = () => {
         }
 
         // Posting Data
-        fetch("https://b8a10-brandshop-server-side-bluebird089-k71ek7rre-bluebird089.vercel.app/products", {
+        fetch("https://b8a10-brandshop-server-side-bluebird089.vercel.app/products", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

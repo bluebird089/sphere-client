@@ -37,7 +37,7 @@ const Update = () => {
         }
 
         // Updating Data
-        fetch(`https://b8a10-brandshop-server-side-bluebird089-k71ek7rre-bluebird089.vercel.app/product/${_id}`, {
+        fetch(`https://b8a10-brandshop-server-side-bluebird089.vercel.app/product/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

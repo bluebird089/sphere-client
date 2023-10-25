@@ -13,7 +13,7 @@ const Details = () => {
     const capitalizedBrandName = capitalizeFirstLetter(`${brandName}`);
 
     const handleAddToCart = () => {
-        fetch("https://b8a10-brandshop-server-side-bluebird089-k71ek7rre-bluebird089.vercel.app/cart", {
+        fetch("https://b8a10-brandshop-server-side-bluebird089.vercel.app/cart", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
