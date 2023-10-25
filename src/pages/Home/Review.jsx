@@ -5,7 +5,7 @@ import ReviwBg from '../../assets/reviewbg.jpg';
 
 const Review = () => {
     return (
-        <div className="container mx-auto my-10 px-3 md:px-0">
+        <div className="container mx-auto py-5 md:py-10 px-3 md:px-0">
             <div className="bg-gray-100 rounded-3xl">
                 <div style={{ backgroundImage: `url(${ReviwBg})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} className="text-white p-3 md:p-10 text-center rounded-3xl space-y-2">
                     <h3 className="md:text-4xl font-semibold">

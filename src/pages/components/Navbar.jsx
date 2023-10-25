@@ -1,9 +1,13 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { FiCodesandbox } from "react-icons/fi";
+import { BiMoon, BiSun } from "react-icons/bi";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import PropTypes from 'prop-types';
 
-const Navbar = () => {
+const Navbar = ({ toggleDarkMode, darkMode }) => {
+
+    const location = useLocation();
 
     const { user, logOut } = useContext(AuthContext);
 
@@ -22,7 +26,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="flex px-2 justify-between items-center bg-base-100 container mx-auto my-5">
+        <div className="flex px-2 justify-between items-center bg-transparent container mx-auto py-5">
             <div className="dropdown">
                 <label tabIndex={0} className="btn btn-sm md:btn-md px-[5px] mr-1 lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -43,13 +47,18 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div className="flex-1 flex justify-end">
+            <div className="flex-1 flex gap-2 justify-end">
+                <button onClick={toggleDarkMode} className={`btn btn-sm sm:btn-md btn-circle flex justify-center ${location.pathname === '/' ? 'block' : 'hidden'}`}>
+                    {
+                        darkMode ? <BiSun className="text-xl"></BiSun> :  <BiMoon className="text-xl"></BiMoon>
+                    }
+                </button>
                 {
                     user ? (
                         <button onClick={handleSignOut} to='/login' className="btn px-2 btn-sm sm:btn-md bg-gray-900 hover:bg-black text-white font-semibold border-none rounded-full">Log Out</button>
                     ) : (<>
-                        <Link to='/register' className="btn px-2 btn-sm sm:btn-md mr-1 font-bold text-black rounded-full">Register</Link>
-                        <Link to='/login' className="btn px-2 btn-sm sm:btn-md bg-gray-900 hover:bg-black  text-white font-semibold border-none rounded-full">Log In</Link>
+                        <Link to='/register' className="btn px-2 btn-sm sm:btn-md font-bold text-black rounded-full">Register</Link>
+                        <Link to='/login' className={`btn px-2 btn-sm sm:btn-md ${darkMode ? 'text-black' : 'bg-gray-900 hover:bg-black text-white'} font-bold border-none rounded-full`}>Log In</Link>
                     </>
                     )
                 }
@@ -57,5 +66,10 @@ const Navbar = () => {
         </div>
     );
 };
+
+Navbar.propTypes = {
+    toggleDarkMode: PropTypes.func.isRequired,
+    darkMode: PropTypes.bool.isRequired,
+}
 
 export default Navbar;

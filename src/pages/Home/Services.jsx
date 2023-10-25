@@ -9,11 +9,16 @@ import { AiFillApple } from "react-icons/ai";
 import { TbArrowUpRight } from "react-icons/tb";
 
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { DarkModeContext } from '../layout/Root';
 
 const Services = () => {
+
+    const darkMode = useContext(DarkModeContext);
+
     return (
-        <div className='container mx-auto my-10'>
-            <div className="bg-slate-100 mx-3 md:mx-0 flex flex-col lg:flex-row rounded-3xl">
+        <div className='container mx-auto py-5 md:py-10'>
+            <div className={`bg-slate-100 ${darkMode && 'bg-opacity-20'} mx-3 md:mx-0 flex flex-col lg:flex-row rounded-3xl`}>
                 <div style={{ backgroundImage: `url(${PrismSphere})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} className="lg:w-1/2 rounded-3xl lg:rounded-r-none p-5 md:p-10 flex flex-col justify-center relative">
                     <FiCodesandbox className="text-3xl md:text-5xl absolute top-5 md:top-10"></FiCodesandbox>
                     <div className='space-y-2 mt-10 md:mt-14 lg:mt-0'>
