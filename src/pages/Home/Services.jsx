@@ -36,7 +36,7 @@ const Services = () => {
                             <h2 className='text-xl sm:text-4xl font-semibold'>Google</h2>
                         </div>
                     </Link>
-                    <Link to='/products/apple' className="bg-white hover:bg-black hover:bg-opacity-5 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
+                    <Link to='/products/apple' className="bg-white hover:bg-gray-300 duration-300 rounded-3xl p-5 h-[120px] sm:h-[140px] flex flex-col justify-between">
                         <div className='flex justify-between items-center'>
                             <AiFillApple className='text-4xl'></AiFillApple>
                             <TbArrowUpRight className='text-2xl'></TbArrowUpRight>

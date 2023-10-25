@@ -2,15 +2,11 @@ import { Link } from 'react-router-dom';
 import SphereBlack from '../../assets/sphereblack.jpg';
 import SphereGray from '../../assets/spheregray.jpg';
 import { TbArrowUpRight, TbSend } from "react-icons/tb";
-import { useContext } from 'react';
-import { DarkModeContext } from '../layout/Root';
 
 const Header = () => {
 
-    const darkMode = useContext(DarkModeContext);
-
     return (
-        <div className="container mx-auto p-2 md:p-0">
+        <div className="container mx-auto p-2 md:px-0">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-5 text-white">
                 <div style={{ backgroundImage: `url(${SphereBlack})` }} className="bg-gray-900 col-span-1 h-[220px] md:h-[300px] lg:h-[450px] xl:h-[550px] p-5 md:p-10 rounded-3xl relative flex items-center">
                     <p className='font-semibold text-sm absolute top-5  md:top-10'>SPHERE</p>
